@@ -1,0 +1,15 @@
+<h2><strong>Plase select your username/Name below! </strong><strong>And click go.</strong></h2>
+<p>If your name is not shown below, contact Chandana Dissanayake to be added.</p>
+<form class="form-inline" method="POST" action="{{ url_for('test') }}">
+    <div class="form-group">
+      <div class="input-group">
+          <span class="input-group-addon">Please Select Your Name (කරුණාකර ඔබේ නම තෝරන්න): </span>
+              <select name="comp_select" class="selectpicker form-control">
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+              </select>
+      </div>
+      <button type="submit" class="btn btn-default">Go</button>
+    </div>
+  </form>
